@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday ❤️</title>
+<style>
+body{margin:0;background:#090909;color:#fff;font-family:Georgia,serif;overflow-x:hidden}
+.wrap{max-width:800px;margin:auto;padding:40px}
+h1{text-align:center;color:#ff7aa2}
+.card{background:#181818;border:1px solid #444;border-radius:16px;padding:24px;line-height:1.8}
+button{display:block;margin:30px auto;padding:14px 24px;border:none;border-radius:30px;background:#ff4d79;color:#fff;font-size:18px}
+#letter{display:none;white-space:pre-wrap}
+.heart{position:fixed;bottom:-20px;color:#ff5c8a;animation:up 8s linear infinite}
+@keyframes up{from{transform:translateY(0)}to{transform:translateY(-120vh)}}
+</style></head>
+<body>
+<div class="wrap">
+<h1>🎂 Happy Birthday My Love, My Potato ❤️</h1>
+<div class="card">
+<p>For Malak 💖</p>
+<button onclick="show()">Open My Letter</button>
+<div id="letter"></div>
+</div></div>
+<script>
+const text=`Happy birthday my love my potato ❤️
+
+A lot has happened since you know what happened between us. We haven't been able to talk properly for a really long time. But you know what? I don't care whether we talk every day or not. I am still yours, my cute little delicate flower.
+
+I still remember how we met on Sea Soul. You told me about your many boyfriends over chai and I told you about my girlfriends over chai. It was honestly hilarious. Then you shared your number with me and told me I was good-looking. Whether it was true or not, it made me smile.
+
+Your hilarious stickers, our late-night talks, our Ramadan conversation, every little memory is still close to my heart. We've been through a lot, but one thing has never changed...
+
+I still love you, Malak.
+
+Today is your birthday and I hope your life is filled with happiness, peace and beautiful moments. I truly hope that one day we get to talk again.
+
+Forever Yours,
+Your beloved delicate flower,
+Adeeb ❤️`;
+function show(){let e=document.getElementById('letter');e.style.display='block';let i=0;let t=setInterval(()=>{e.textContent+=text[i++]||'';if(i>text.length)clearInterval(t)},20);}
+for(let i=0;i<25;i++){let h=document.createElement('div');h.className='heart';h.textContent='❤';h.style.left=Math.random()*100+'vw';h.style.animationDelay=(Math.random()*8)+'s';document.body.appendChild(h);}
+</script></body></html>
